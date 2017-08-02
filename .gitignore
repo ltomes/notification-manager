@@ -57,3 +57,11 @@ typings/
 # dotenv environment variables file
 .env
 
+## System and generated files
+.idea
+.DS_Store
+.sass-cache
+.vscode
+
+## Compile Directories
+dist/

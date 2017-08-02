@@ -1,0 +1,55 @@
+// Apply a natural box layout model to all elements
+// but allowing components to change
+// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+html {
+    box-sizing: border-box;
+    body {
+        background: url('https://ssl.gstatic.com/ui/v1/icons/mail/images/2/5/android/bg.png');
+        #notifications {
+            display: flex;
+            bottom: 10px;
+            position: absolute;
+            max-height: 320px;
+            height: auto;
+            width: 300px;
+            overflow-x: scroll;
+            flex-direction: column;
+            .notification {
+                display: flex;
+                width: 300px;
+                height: 45px;
+                align-items: center;
+                padding: 20px;
+                margin: 2px 0;
+                box-sizing: border-box;
+                border: 1px solid #8c7474;
+                p.background {
+                    width: 100%;
+                    height: 100%;
+                    padding: 0;
+                    margin: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba(255, 255, 255, 0.3);
+                    border-radius: 5px;
+                    font-family: sans-serif;
+                    text-align: center;
+                    line-height: 1; 
+                    max-width: 50%;
+                    max-height: 50%;
+                    padding: 20px 40px;
+                }
+                p.copy {
+                    position: relative;
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
