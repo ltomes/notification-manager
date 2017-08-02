@@ -1,5 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 // Is the current build a development build
 const IS_DEV = (process.env.NODE_ENV === 'dev');
 
@@ -34,6 +36,11 @@ module.exports = {
         new webpack.ProvidePlugin({
             // lodash
             '_': 'lodash'
+        }),
+
+        new HtmlWebpackPlugin({
+            template: path.join(__dirname, 'index.ejs'),
+            title: appHtmlTitle
         })
     ],
     module: {
@@ -82,6 +89,13 @@ module.exports = {
                     }
                 ]
             },
+
+            // EJS
+            {
+                test: /\.ejs$/,
+                loader: 'ejs-loader'
+            },
+
             // IMAGES
             {
                 test: /\.(jpe*g|png|gif)$/,
