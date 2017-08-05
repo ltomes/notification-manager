@@ -21,7 +21,7 @@ At the moment run the script directly from src.
 ## Usage
 Import the library
 CommonJS import
-// let notificationManager = require('notification-manager');
+`let notificationManager = require('notification-manager');`
 
 ES6 import
-import { notificationManager } from 'notification-manager';
+`import { notificationManager } from 'notification-manager';`
